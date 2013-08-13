@@ -82,8 +82,8 @@ As we have already mentioned, facet computation is restricted to the scope of th
 <pre class="prettyprint lang-js">
 {
     "facets" : {
-        "<FACET NAME>" : {
-            "<FACET TYPE>" : { ... },
+        "tags" : { 
+            "terms" : { ... },
             "global" : true
         }
     }
@@ -101,10 +101,8 @@ All facets can be configured with an additional filter (explained in the "Query 
 <pre class="prettyprint lang-js">
 {
     "facets" : {
-        "<FACET NAME>" : {
-            "<FACET TYPE>" : {
-                ...
-            },
+        "tags" : { 
+            "terms" : { ... },
             "facet_filter" : {
                 "term" : { "user" : "kimchy"}
             }
